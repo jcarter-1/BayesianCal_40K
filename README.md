@@ -30,7 +30,7 @@ Excel spreadsheet containing all the input data used in the model. These are R-v
 
 Python Class
 ------------
-BayesCal_MCMC.py is a python class that holds in it all the function needed for the algorithm. 
+BayesCalMCMC.py is a python class that holds in it all the function needed for the algorithm. This can then be run by importing the class into a jupyter notebook. For an example see the section below. 
 
 Jupyter Notebook
 ----------------
