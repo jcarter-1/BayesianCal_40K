@@ -34,7 +34,7 @@ BayesCalMCMC.py is a python class that holds in it all the function needed for t
 
 Jupyter Notebook
 ----------------
-Running_Notebook.ipynb is a jupyter notebook that first reads in the python then allows the user to define how many chains, how many iterations, and how many batches to run the MCMC for. This notebook also lays out the handy function calls to get various diagnostic chain results (e.g., posterior plot or Gelman-Rubin statistic) or inferences of the model (e.g., Get_40K_Decay_Stuff). Comments are provided in the notebook for easier reading. 
+Run_BayedCal.ipynb is a jupyter notebook that first reads in the python then allows the user to define how many chains, how many iterations, and how many batches to run the MCMC for. This notebook also lays out the handy function calls to get various diagnostic chain results (e.g., posterior plot or Gelman-Rubin statistic) or inferences of the model (e.g., Get_40K_Decay_Stuff). Comments are provided in the notebook for easier reading. 
 
 Environment
 -----------
