@@ -8,7 +8,7 @@ This work is a combined effort from the 40Ar/39Ar lab-group at the Berkeley Geoc
 
 Why it is necessary
 -------------------
-The 40K decay constant underpins both the K-Ar and 40Ar/39Ar chronometers. However, currently there are a range of potential choices for calibrations that have their own unique nominal values and distinct uncertainties. With this algorithm we attempt to make the "best" estimate of the 40K decay constant using the analyses of Vesuvius and a suite of samples with combined 40Ar/39Ar, U238/Pb206, and U235/207Pb data. We have attempted to account for as many unknowns of all of these systems with unique age perturbation parameters for all samples. We then perform a detailed MCMC analysis to make inferences on the 40K total decay constant and all other model parameters. For all details see - Jack N. Carter, Caroline E.J. Hasler, Anthony J. Fuentes, Andrew J. Tholt, Leah E. Morgan, Paul R. Renne,
+The 40K decay constant underpins both the K-Ar and 40Ar/39Ar chronometers. However, currently there are a range of potential choices for calibrations that have their own unique nominal values and distinct uncertainties. With this algorithm we attempt to make the "best" (or least wrong) estimates of the 40K decay constant using the analyses of Vesuvius and a suite of samples with combined 40Ar/39Ar, U238/Pb206, and U235/207Pb data. We have attempted to account for as many unknowns of all of these systems with unique age perturbation parameters for all samples. We then perform a detailed MCMC analysis to make inferences on the 40K total decay constant and all other model parameters. For all details see - Jack N. Carter, Caroline E.J. Hasler, Anthony J. Fuentes, Andrew J. Tholt, Leah E. Morgan, Paul R. Renne,
 Bayesian calibration of the 40K decay scheme with implications for 40K-based geochronology,
 Geochimica et Cosmochimica Acta,
 2025,
@@ -39,4 +39,8 @@ Run_BayedCal.ipynb is a jupyter notebook that first reads in the python then all
 Environment
 -----------
 environment.yaml gets all code depencies required to run the python class.
+
+Pickles
+-------
+A key part of this model is the use of pickles to conintually save a snapshot of the current chain parameter vector space. Also include is a tempering step where we continually reduce the temperature to explore more likely regions of the complete posterior landscape. We do not decide on some set burn in for this reason. But we sample continous until reaching the both the target temperature and target acceptance rate for each parameter ~23.4% and then we sample these stationary chains to build the posterior that is used for all model inferences. Everything before this point is discarded like a more traditional burn in. 
 
