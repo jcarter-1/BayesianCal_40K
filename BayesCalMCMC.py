@@ -129,8 +129,8 @@ class BayesCal_MCMC:
         
         self.Vesuvius_Age1_err = self.Ves_age(self.R_values[0], self.R_values_err[0])
         self.Vesuvius_Age2_err = self.Ves_age(self.R_values[1], self.R_values_err[1])
-        self.Vesuvius_Age1 = 1917.5 # Measurements (1997) to timing of Vesuvius Eruption
-        self.Vesuvius_Age2 = 1917.5 + 16 # Measurements (2013) to timing of Vesuvius Eruption
+        self.Vesuvius_Age1 = 1917.5 /1e6 # Measurements (1997) to timing of Vesuvius Eruption
+        self.Vesuvius_Age2 = (1917.5 + 16)/1e6 # Measurements (2013) to timing of Vesuvius Eruption
 
     def Ves_age(self, R, Rerr):
         age = np.zeros(30000)
